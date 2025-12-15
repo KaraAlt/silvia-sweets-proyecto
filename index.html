@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Silvia Sweets - La fusión perfecta entre verdulería fresca y postres saludables. Recetas, tips y venta online.">
+    <meta name="keywords" content="verdulería, postres saludables, recetas veganas, silvia sweets, la tablada">
+    <title>Silvia Sweets | Frescura y Dulzura</title>
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/png">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header id="inicio">
+        <div class="header-container">
+            <div class="brand">
+                <img src="imagenes/logo.png" alt="Logo Silvia Sweets" class="logo-img">
+                <h1>Silvia Sweets</h1>
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#shopLane">Productos</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button id="cartButton" class="cart-btn" aria-label="Ver carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Del Huerto a tu Mesa (y a tu Postre)</h2>
+            <p>Descubrí cómo transformamos frutas y verduras frescas en delicias saludables.</p>
+            <a href="#shopLane" class="cta-button">Ver Productos</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="intro-section">
+            <p class="greeting">🌱🍓 ¡Hola! Soy Silvia 🌱🍓</p>
+            <p>¿Se te antoja algo <strong><em>DULCE</em></strong> pero saludable? 🙌
+            En mi verdulería no solo encontrarás frutas y verduras frescas, también un rincón dulce pensado para todos: celiacos, veganos, intolerantes a la lactosa… ¡y para quienes simplemente quieren cuidarse!</p>
+            
+            <ul class="star-list">
+                <li>Cómo encargar tus postres saludables.</li>
+                <li>Beneficios de cada verdura para tu salud.</li>
+                <li>Recetas fáciles y tips de aprovechamiento.</li>
+            </ul>
+
+            <div class="video-center">
+                <video controls poster="imagenes/preview.png" width="100%">
+                    <source src="video.mp4" type="video/mp4">
+                    <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+        </section>
+
+        <section id="shopLane" class="shop-section">
+            <h2>Nuestros Productos</h2>
+            <p style="text-align:center; color:#666;">Cargando productos frescos...</p>
+            </section>
+
+        <section id="resenas" class="reviews-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <img src="imagenes/avatar1.png" alt="Cliente feliz" class="avatar">
+                    <blockquote>"Los parfaits son increíbles. Nunca pensé que comer sano fuera tan rico."</blockquote>
+                    <cite>- Laura G.</cite>
+                </article>
+                <article class="review-card">
+                    <img src="imagenes/avatar2.png" alt="Cliente feliz" class="avatar">
+                    <blockquote>"La calidad de la verdura es superior. ¡Y los tips de Silvia en TikTok son lo más!"</blockquote>
+                    <cite>- Martín R.</cite>
+                </article>
+                <article class="review-card">
+                    <img src="imagenes/avatar3.png" alt="Cliente feliz" class="avatar">
+                    <blockquote>"Hice el pedido por la web y llegó todo perfecto. Súper recomendado."</blockquote>
+                    <cite>- Sofía M.</cite>
+                </article>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h3>Dónde encontrarnos</h3>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.234!2d-58.5!3d-34.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zCatriel 4793, B1766FLG La Tablada!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p class="address">Catriel 4793, La Tablada, Buenos Aires</p>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <div class="form-container">
+                <h3>Contacto</h3>
+                <form id="contactForm" action="https://formspree.io/f/xyznydzr" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    <p id="formStatus" class="status-msg"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Silvia Sweets. Hecho con 💚 y código.</p>
+        <div class="socials">
+            <a href="https://www.tiktok.com/@silvieuq?lang=es" target="_blank">Síguenos en TikTok</a>
+        </div>
+    </footer>
+
+    <div id="cartModal" class="cart-modal" aria-hidden="true">
+        <div class="cart-modal-backdrop"></div>
+        <div class="cart-modal-panel">
+            <div class="cart-header">
+                <h3>Tu Carrito 🛒</h3>
+                <button id="closeCart" class="close-btn">&times;</button>
+            </div>
+            <div id="cartContents" class="cart-body"></div>
+            <div class="cart-footer">
+                <div class="total-row">Total: <span id="modalTotal">$0</span></div>
+                <div class="cart-actions">
+                    <button id="clearCart" class="btn-outline">Vaciar</button>
+                    <button id="sendCart" class="btn-primary">Finalizar Compra (Mail)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
